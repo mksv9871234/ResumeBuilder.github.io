@@ -245,22 +245,79 @@ function ResumeCreater() {
 
   // Show the resume section
   document.getElementById("resume").style.display = 'block';
-
 }
 
 
 function printResume() {
-   
-
     // Trigger the print dialog
     window.print();
 
     // Reset the visibility after printing
     document.getElementById("Resume-builder").style.display = 'block';
     document.getElementById("resume").style.display = 'none';
+}
 
+
+// function previewImage(input) {
+  
+// }
+
+
+function checkImageSize(input) {
+    var imagePreview = document.getElementById("imagePreview");
+    var input = document.getElementById("ReciveImage");
+    var errorMessage = document.getElementById("textImg");
+    while (imagePreview.firstChild) {
+    imagePreview.removeChild(imagePreview.firstChild);
+    }
+    // Check if a file is selected
+    if (input.files && input.files[0]) {
+        var img = new Image();
+
+        img.onload = function () {
+            // Check if width and height are the same
+            if (img.width !== img.height) {
+                // Display an error message
+                errorMessage.innerHTML = "Error: Image width and height should be the same.";
+                errorMessage.style.color = 'red';
+                input.value = ""; // Clear the selected file
+            } else {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+            
+                    reader.onload = function (e) {
+                        // Create an img element and set its source to the preview URL
+                        var img = document.createElement("img");
+                        img.src = e.target.result;
+                        img.style.width = "200px"; // Set a width for the preview image
+                        img.style.height = "200px"; // Set a height for the preview image
+                        imagePreview.appendChild(img);
+            
+                        // Set the image source for the resume section
+                        var resumeImage = document.getElementById("imagePreview");
+                        resumeImage.src = e.target.result;
+                        resumeImage.style.width = "200px"; // Set a width for the resume image
+                        resumeImage.style.height = "200px"; // Set a height for the resume image
+                    };
+            
+                    // Read the selected file as a data URL
+                    reader.readAsDataURL(input.files[0]);
+                }
+                errorMessage.innerHTML = "Image Uploded Successfully !"
+                errorMessage.style.color = 'green';
+            }
+               
+        };
+        // Read the selected file as a data URL
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            img.src = e.target.result;
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
 
 }
+
 
 
 
