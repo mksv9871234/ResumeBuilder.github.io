@@ -19,7 +19,7 @@
             <div class="col-sm-4 SubInfo">
                 <div class="SubInfo-content mb-5">
                     <div class="SubInfo-bio">
-                        <img id="ImageField" src="img/mks.jpeg" />
+                        <div id="imagePreview"></div>
                         <h2 id="NameField">Magdum Shaikh</h2>
                         <h3 id="ProfessionFiend">Software Developer</h3>
                     </div>
@@ -129,6 +129,14 @@
             <div class="col-sm-4">
                 <div class="personal-info" id="form">
                     <h2>Personal Information</h2>
+                    <p style="font-size: 15px; " id="textImg">The width and height of the image should be the same</p>
+                    <label for="ReciveImage" class="custom-file-input">
+                     Upload Image
+                        <!-- <input type="file" id="ReciveImage" onchange="previewImage(this)" id="imageInput" accept="image/*" onchange="checkImageSize()" required />
+                         -->
+                         <input type="file" id="ReciveImage" onchange="checkImageSize(this)" id="imageInput"  accept="image/*" required />
+
+                    </label>
                     Enter Name <input type="text" id="ReciveName" required />
                     Work/Profession <input type="text" id="profession" required />
                     Address <input type="text" id="address" required />
@@ -150,7 +158,6 @@
                     <h5>Hobbies</h5>
                     <input type="text" id="input_hobbie" placeholder="Enter Hobbies" />
                     <input type="button" id="Exa_Hobbies" value="Add" onclick="addhobbie()" />
-                    Upload Image <input type="file" id="ReciveImage" required />
                 </div>
             </div>
             <div class="col-sm-8">
