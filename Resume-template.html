@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="Resume-template.css">
+    <title>Resume Builder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+    <div class="container-fluid " id="resume">
+        <div class="row">
+            <div class="col-sm-4 SubInfo">
+                <div class="SubInfo-content mb-5">
+                    <div class="SubInfo-bio">
+                        <img id="ImageField" src="img/mks.jpeg" />
+                        <h2 id="NameField">Magdum Shaikh</h2>
+                        <h3 id="ProfessionFiend">Software Developer</h3>
+                    </div>
+                    <div class="SubInfo-details mt-2">
+                        <h4>Details</h4>
+                        <h5 class="mb-1" id="AddressField">Hangarga,Post:Suglegav, Tq:Naigaon, Dist:Nanded, Maharashtra
+                            431709</h5>
+                        <h5 id="numberField">8080981549</h5>
+                        <h5 id="EmailField">Shaikhmagdum877@gmail.com</h5>
+                        <h5 class="mb-4" id="WebsiteField">https://web.whatsapp.com/</h5>
+                        <h5 id="facebookField"><img src="img/facebook.png" />Shaikh Magdum</h5>
+                        <h5 id="twitterFIeld"><img src="img/twitter.png" />Shaikh Magdum</h5>
+                        <h5 id="instagramField"><img src="img/instagram.png" />Shaikh Magdum</h5>
+                        <h5 id="linkedinField"><img src="img/linkedin.png" />Shaikh Magdum</h5>
+                        <h4 class="mt-2 mb-2">Tools of the trade</h4>
+                        <h5 id="ToolsField">
+                            npm (Node Package Manager)<br>
+                            pip (Python Package Installer)<br>
+                            visual studio code<br>
+                            Notepad++<br>
+                            MySQL Workbench<br>
+                        </h5>
+
+                        <h4 class="mt-2">Languages</h4>
+                        <h5 id="language">English</h5>
+                        <h4 class="mt-2 mb-2">Hobbies</h4>
+                        <h5  id="HobbiesField">Gaming<br>Bloging<br>music<br>Photography</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8 FullInfo">
+                <div class="FullInfo-content ">
+                    <h4>Profile</h4>
+                    <h6 id="profileField">As a software developer, my professional profile is characterized by a
+                        results-oriented and highly motivated approach to crafting innovative solutions. With a passion
+                        for technology and a keen eye for detail, I have consistently demonstrated the ability to
+                        translate complex requirements into efficient and scalable software systems.</h6>
+                    <h4>Experience</h4>
+                    <h5 id="Experience_titleField">Software Developer</h5>
+                    <h6 id="ExperienceField">
+                        As a seasoned software developer, I bring a wealth of experience in designing, implementing, and
+                        maintaining robust software solutions. Over the course of my career, I have successfully led
+                        multiple development projects, demonstrating proficiency in various programming languages,
+                        frameworks, and technologies. </h6>
+
+
+
+
+                    <h4>Education</h4>
+
+                    <h6 id="EducationField">
+                        In terms of education, I hold a MCA in Computer Science from Jijau University Pune. Throughout
+                        my academic journey, I acquired a solid foundation in computer science principles, algorithms,
+                        and data structures. This educational background equipped me with a comprehensive understanding
+                        of software development fundamentals. Additionally, I actively engaged in coursework that delved
+                        into topics such as database management, system architecture, and software engineering
+                        methodologies.</h6>
+
+                    <h4>Certificates</h4>
+
+                    <h6 id="CertificatesField"> AWS Certified Solutions Architect – Associate (AWS-CSAA):
+
+                        Successfully earned the AWS Certified Solutions Architect – Associate certification,
+                        demonstrating proficiency in designing and deploying scalable and fault-tolerant systems on the
+                        Amazon Web Services (AWS) platform.<br><br>Microsoft Certified: Azure Developer Associate:
+
+                        Attained the Microsoft Certified: Azure Developer Associate certification, showcasing expertise
+                        in designing, building, testing, and maintaining applications and services on Microsoft
+                        Azure.<br><br>Certified ScrumMaster (CSM):
+
+                        Achieved the Certified ScrumMaster designation, signifying a deep understanding of Scrum
+                        principles and the ability to facilitate agile development teams towards successful project
+                        delivery.</h6>
+
+
+
+                    <h4>Most Proud Of</h4>
+
+                    <h6 id="ProudMostField">
+
+                        I take immense pride in my role as the lead developer for a critical project that involved the
+                        development of [Project Name]. This endeavor presented a multifaceted challenge, requiring a
+                        blend of technical expertise, strategic thinking, and effective collaboration. Notably, I
+                        successfully led a cross-functional team through the entire project lifecycle, from inception to
+                        delivery.
+
+                        One key accomplishment was implementing a groundbreaking feature that significantly enhanced the
+                        overall functionality and user experience of the application. This involved developing a robust
+                        and scalable architecture, optimizing code performance, and integrating cutting-edge
+                        technologies. The successful deployment of this feature garnered positive feedback from both
+                        end-users and stakeholders, resulting in a measurable increase in user engagement and
+                        satisfaction. </h6>
+
+                </div>
+            </div>
+        </div>
+        <div class="text-center" id="Print-CV">
+            <button type="button" class="Resumebtn" onclick="printResume()">PRINT CV</button>
+            </div>
+    </div>
+
+    <!-- Resume Builder section -->
+
+    <div class="container-fluid " id="Resume-builder">
+        <h1 class="text-center p-3">RESUME BUILDER</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="personal-info" id="form">
+                    <h2>Personal Information</h2>
+                    Enter Name <input type="text" id="ReciveName" required />
+                    Work/Profession <input type="text" id="profession" required />
+                    Address <input type="text" id="address" required />
+                    Phone <input type="number" id="phone" required />
+                    Email <input type="email" id="email" required />
+                    <h5>Links</h5>
+                    Website <input type="link" id="website"  />
+                    Facebook <input type="link" id="facebook"  />
+                    Instagram <input type="link" id="instagram"  />
+                    Twitter <input type="link" id="twitter"  />
+                    linkedin <input type="link" id="linkedin"  />
+
+                    Tools of the trade<input type="text" id="ReciveToos" />
+                    <input type="button" id="toolsAddBtn" onclick="addTools()" value="Add" />
+                    <h5>Language</h5>
+
+                    <input type="text" id="input_lan" placeholder="Enter language" required/>
+                    <input type="button" id="Exa_Language" value="Add" onclick="addlanguage()" />
+                    <h5>Hobbies</h5>
+                    <input type="text" id="input_hobbie" placeholder="Enter Hobbies" />
+                    <input type="button" id="Exa_Hobbies" value="Add" onclick="addhobbie()" />
+                    Upload Image <input type="file" id="ReciveImage" required />
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="professional-Info" id="ProForm">
+                    <h2>Professional Information</h2>
+                    Profile <textarea type="text" id="profile" style="height: 200px;"
+                        placeholder="Enter hrer"></textarea>
+                    Experience Title <input type="text" id="Experience_title" />
+                    Experience <textarea type="text" id="Experience" style="height: 200px;"
+                        placeholder="Enter hrer"></textarea>
+                    <input type="button" id="Exa_Experience" value="Add" onclick="addExperience()" />
+                    <h5>Education</h5>
+                    <input type="text" id="Education" required/>
+                    <input type="button" id="Exa_digree" value="Add" onclick="addDegree()" />
+                    <h5>Certificates</h5>
+                    <h6 id="Certificates_add"></h6>
+                    <input type="text" id="Certificates" />
+                    <input type="button" id="Exa_certificates" value="Add" onclick="addCertificates()" />
+                    <h5>Most Proud of</h5>
+                    <h6 id="ProudOf_add"></h6>
+                    <input type="text" id="Proud_of" />
+                    <input type="button" id="Exa_Proud_of" value="Add" onclick="addProudOf()" />
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3">
+            <button type="button" class="Resumebtn" onclick="ResumeCreater()">CREATE CV</button>
+        </div>
+    </div>
+    <script src="Resume-template.js"></script>
+</body>
+
+</html>
